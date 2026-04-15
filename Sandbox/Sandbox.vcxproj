@@ -56,8 +56,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)Kick\src;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions);_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kick\src;$(SolutionDir)Kick\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <TreatWarningAsError>No</TreatWarningAsError>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -68,8 +69,9 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)Kick\src;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions);_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kick\src;$(SolutionDir)Kick\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <TreatWarningAsError>No</TreatWarningAsError>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

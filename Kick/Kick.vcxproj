@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Kick\Log.h" />
     <ClInclude Include="src\Kick.h" />
     <ClInclude Include="src\Kick\Application.h" />
     <ClInclude Include="src\Kick\Core.h" />
     <ClInclude Include="src\Kick\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Kick\Log.cpp" />
     <ClCompile Include="src\Kick\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -65,7 +67,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;KC_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;KC_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions);_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kick\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8
+ %(AdditionalOptions)</AdditionalOptions>
+      <TreatWarningAsError>No</TreatWarningAsError>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -76,7 +82,11 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;KC_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KC_PLATFORM_WINDOWS;KC_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions);_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kick\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8
+ %(AdditionalOptions)</AdditionalOptions>
+      <TreatWarningAsError>No</TreatWarningAsError>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
